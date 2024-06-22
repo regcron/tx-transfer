@@ -8,9 +8,9 @@ Assumptions:
 - Allow self-transfer
 
 APIs:
-POST /accounts
-GET /accounts/:accountId
-POST /transactions
+- POST /accounts
+- GET /accounts/:accountId
+- POST /transactions
 
 Steps to run:
 - Requirements: Make sure you have Docker installed and have started Docker Engine
