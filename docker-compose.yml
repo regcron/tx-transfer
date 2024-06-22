@@ -1,0 +1,33 @@
+services:
+  db:
+    image: postgres
+    container_name: db_container
+    ports:
+      - 6500:5432
+    env_file:
+      - ./app.env
+    volumes:
+      - ./docker-data/db:/var/lib/postgresql/data
+    networks:
+      - tx-network
+  tx:
+    container_name: tx_container
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ${PWD}/:/app
+    restart: always
+    env_file: ./app.env
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    logging:
+      options:
+        max-size: 10m
+    networks:
+      - tx-network
+networks:
+  tx-network:
+    driver: bridge
