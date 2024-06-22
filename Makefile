@@ -12,7 +12,9 @@ build:
 	docker-compose build
 .PHONY:run
 run:
-	docker-compose up -d
+	docker-compose up -d db
+	sleep 5
+	docker-compose up -d tx
 
 .PHONY:stop
 stop:
