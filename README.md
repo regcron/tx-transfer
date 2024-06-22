@@ -26,8 +26,9 @@ Steps to run:
 Technologies:
 --- 
 - Domain Driven Design architecture
+- Docker and docker-compose for service containerization
 - Postgresql for storage
 - gorm for DB ORM
-- Viper for config loader
+- viper for config loader
 - gin for HTTP server
 - Golang v1.21
