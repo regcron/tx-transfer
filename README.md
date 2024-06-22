@@ -1,4 +1,3 @@
-Base URL: localhost:8000/api/v1
 
 Assumptions:
 - Account id must be a positive integer and unique
@@ -7,15 +6,16 @@ Assumptions:
 - Transfer amount must not be <=0
 - Allow self-transfer
 
-APIs:
+APIs:<br/>
+Base URL: localhost:8000/api/v1
 - POST /accounts
 - GET /accounts/:accountId
 - POST /transactions
 
 Steps to run:
-- Requirements: Make sure you have Docker installed and have started Docker Engine
-- To build project: make build
-- To start services: make run.  localhost:8000/api/v1/accounts or localhost:8000/api/v1/transactions
-- To view tx service logs: make logs
-- To stop all services: make stop
-- To run unit tests: make unit-tests
+- Requirements: Make sure you have Docker installed and have started Docker Engine. All the following commands to be run from project root folder.
+- Build: `make build`
+- Start services: `make run`
+- View service logs: `make logs`
+- Stop all services: `make stop`
+- Run unit tests: `make unit-tests`
